@@ -57,7 +57,7 @@ export const AddTask = ({
   return(
   <div 
     className = { showQuickAddTask? "add-task add-task__overlay": "add-task"}
-    data-testid = "add-task-comp"
+    data-testid = { showQuickAddTask? "add-task-quick-comp": "add-task-main-comp"}
   >
     {showAddTaskMain && (
       <div
@@ -159,7 +159,7 @@ export const AddTask = ({
         </span>
         <span 
           className = "add-task__date"
-          data-testid = "show-date-overlay"
+          data-testid = "show-task-date-overlay"
           onClick = {()=> setShowTaskDate(!showTaskDate)}
         >
           <FaRegCalendarAlt />

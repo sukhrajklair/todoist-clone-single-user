@@ -8,7 +8,7 @@ export const TaskDate = ({
   setShowTaskDate,
 }) => (
   showTaskDate && (
-    <div className = "task-date" data-testid = "test-date-overlay">
+    <div className = "task-date" data-testid = "task-date-overlay">
       <ul className = "task-date__list">
         <li 
           data-testid = "task-date-today"

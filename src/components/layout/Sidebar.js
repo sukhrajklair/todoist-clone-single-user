@@ -47,7 +47,7 @@ export const Sidebar = ({sidebarCollapsed}) => {
           data-testid = "next_7"
           className = {active === 'next_7' ? 'active' : undefined}
           onClick = { () => {
-          setActive('tnext_7');
+          setActive('next_7');
           setSelectedProject('NEXT_7');
           }}
         >
@@ -68,7 +68,7 @@ export const Sidebar = ({sidebarCollapsed}) => {
       </div>
 
       <ul className = "sidebar__projects">{showProjects && <Projects />}</ul>
-      <AddProject />
+      {showProjects && <AddProject />}
     </div>
   );
 }

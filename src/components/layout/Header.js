@@ -6,7 +6,7 @@ export const Header = ({
   darkMode, 
   setDarkMode, 
   sidebarCollapsed,
-  setSideBarCollapsed
+  setSidebarCollapsed
 }) => {
   const [ shouldShowMain, setShouldShowMain ] = useState(false);
   const [ showQuickAddTask, setShowQuickAddTask ] = useState(false);
@@ -14,7 +14,8 @@ export const Header = ({
     <header className="header" data-testid = "header">
       <nav>
         <div className = "logo"
-          onClick={()=>setSideBarCollapsed(!sidebarCollapsed)}>
+          data-testid = "sidebar-collapse-action"
+          onClick={()=>setSidebarCollapsed(!sidebarCollapsed)}>
           <img src = "/images/logo.png" alt ="Todoist" />
         </div>
         <div className = "settings">
